@@ -1,0 +1,23 @@
+{
+  "name": "80smovies",
+  "version": "1.0.0",
+  "description": "Andrew Bayles Andretti Duvenhage",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrettiD/80sMovies.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndrettiD/80sMovies/issues"
+  },
+  "homepage": "https://github.com/AndrettiD/80sMovies#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
