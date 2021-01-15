@@ -11,13 +11,13 @@ class App extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault()
     event.target.reset()
-    axios.post('/80smovies', this.state).then(response => this.setState({ movies: response.data, title: "", genre: "", rated: "", imageMain: ""})
+    axios.post('/movies', this.state).then(response => this.setState({ movies: response.data, title: "", genre: "", rated: "", imageMain: ""})
     )
   }
 
   
   deleteMovie = (event) => {
-    axios.delete('/80smovies/' + event.target.value).then(response => {
+    axios.delete('/movies/' + event.target.value).then(response => {
       this.setState({
         movies: response.data
       })
@@ -29,7 +29,7 @@ class App extends React.Component {
     event.preventDefault()
     event.target.reset()
     const id = event.target.id
-    axios.put('/80smovies/' + id, this.state).then(response => {
+    axios.put('/movies/' + id, this.state).then(response => {
       this.setState({
         movies: response.data,
         title: "",
@@ -45,7 +45,7 @@ class App extends React.Component {
   }
 
   componentDidMount = () => {
-    axios.get("/80smovies").then(response => {
+    axios.get("/movies").then(response => {
       this.setState({
         movies: response.data
       })
@@ -55,36 +55,31 @@ class App extends React.Component {
   render = () => {
     return (
       <div>
-
-        // <details className="create">
-        // <form onSubmit={this.handleSubmit}>
-        //   <label htmlFor="name">Name</label>
-        //   <input
-        //   type='text'
-        //   id='name'
-        //   onChange={this.handleChange} />
-        //   <br />
-        //   <label htmlFor="image">Image</label>
-        //   <input
-        //   type='text'
-        //   id='image'
-        //   onChange={this.handleChange} />
-        //   <br />
-        //   <label htmlFor="movie">Movie</label>
-        //   <input
-        //   type='text'
-        //   id='movie'
-        //   onChange={this.handleChange} />
-        //   <br />
-        //   <label htmlFor="price">Price</label>
-        //   <input
-        //   type='text'
-        //   id='price'
-        //   onChange={this.handleChange} />
-        //   <br />
-        //   <input className="myButton" type="submit" value="Create Prop" />
-        // </form>
-        // </details>
+         <details className="create">
+         <form onSubmit={this.handleSubmit}>
+         <label htmlFor="name">Name</label>
+          <input
+          type='text'
+          id='name'
+          onChange={this.handleChange} />
+          <br />
+          <label htmlFor="image">Image</label>
+          <input
+          type='text'
+          id='image'
+          onChange={this.handleChange} />
+          <br />
+          <label htmlFor="movie">Movie</label>
+          <input
+          type='text'
+          id='movie'
+          onChange={this.handleChange} />
+          <br />
+          
+    
+          <input className="myButton" type="submit" value="Add Movie" />
+        </form>
+        </details>
 
       <ul>
 
@@ -101,13 +96,13 @@ class App extends React.Component {
                   <br/>
 
                   <h3>Title: {movie.title}</h3>
-                  <img src="{movie.imageMain}" />
+                  <img src={movie.image1} />
                   <h3>Genre: {movie.genre}</h3>
                   <h3>Rated: {movie.rated}</h3>
 
                 </details>
 
-                // <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Buy Now</button>
+                 {/* <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Buy Now</button> */}
 
                 <details>
                   <summary>Edit Here</summary>
