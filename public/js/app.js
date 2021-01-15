@@ -15,7 +15,7 @@ class App extends React.Component {
     )
   }
 
-  /*
+  
   deleteMovie = (event) => {
     axios.delete('/80smovies/' + event.target.value).then(response => {
       this.setState({
@@ -23,7 +23,8 @@ class App extends React.Component {
       })
     })
   }
-  */
+  
+  
   updateMovie = (event) => {
     event.preventDefault()
     event.target.reset()
