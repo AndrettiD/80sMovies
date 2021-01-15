@@ -10,21 +10,21 @@ movies.get ("/", (req, res) => {
 })
 
 movies.post("/", (req, res) => {
-    Movie.create(req.body, (err, createMovie) => {
-        Movie.find({}, (err, foundMovies) => {
+    Movies.create(req.body, (err, createMovies) => {
+        Movies.find({}, (err, foundMovies) => {
             res.json(foundMovies)
         })
     })
 })
 
 movies.put("/:id", (req, res) => {
-    Movie.findByIdAndUpdate(
-      req.params.id, req.body, { new: true },(err, updatedMovie) => {
+    Movies.findByIdAndUpdate(
+      req.params.id, req.body, { new: true },(err, updatedMovies) => {
         if (err) {
           console.log(err);
         } else {
-          Movie.find({}, (err, updatedMovie) => {
-            res.json(updatedMovie)
+          Movies.find({}, (err, updatedMovies) => {
+            res.json(updatedMovies)
           })
         }
       }
@@ -32,8 +32,8 @@ movies.put("/:id", (req, res) => {
   })
 
   movies.delete("/:id", (req, res) => {
-      Movie.findByIdAndRemove(req.params.id, (err, deleteMovie) => {
-          Movie.find({}, (err, foundMovies) => {
+      Movies.findByIdAndRemove(req.params.id, (err, deleteMovies) => {
+          Movies.find({}, (err, foundMovies) => {
               res.json(foundMovies)
           })
       })
