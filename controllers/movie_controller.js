@@ -32,8 +32,8 @@ movies.put("/:id", (req, res) => {
   })
 
   movies.delete("/:id", (req, res) => {
-      Movie.findByIdAndRemove(req.params.id, (err, deleteMovie) => {
-          Movie.find({}, (err, foundMovies) => {
+      Movies.findByIdAndRemove(req.params.id, (err, deleteMovies) => {
+          Movies.find({}, (err, foundMovies) => {
               res.json(foundMovies)
           })
       })
