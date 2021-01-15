@@ -4,3 +4,13 @@ Dark Grey: #222831
 Navy Blue: #30475E
 Neon Pink: #F05454
 */
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url("images/wallpaper_dark.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
