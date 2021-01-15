@@ -24,7 +24,6 @@ class App extends React.Component {
     })
   }
   */
-
   updateMovie = (event) => {
     event.preventDefault()
     event.target.reset()
