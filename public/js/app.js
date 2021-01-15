@@ -97,8 +97,11 @@ class App extends React.Component {
 
                   <h3>Title: {movie.title}</h3>
                   <img src={movie.image1} />
+                  <img src={movie.image2} />
+                  <img src={movie.image3} />
                   <h3>Genre: {movie.genre}</h3>
                   <h3>Rated: {movie.rated}</h3>
+                  <h3>Summery: {movie.summary}</h3>
 
                 </details>
 
