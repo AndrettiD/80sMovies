@@ -77,10 +77,10 @@ class App extends React.Component {
           id='image'
           onChange={this.handleChange} />
           <br />
-          <label htmlFor="movie">Movie</label>
+          <label htmlFor="summary">Summary</label>
           <input
           type='text'
-          id='movie'
+          id='summary'
           onChange={this.handleChange} />
           <br />
 
