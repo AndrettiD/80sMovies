@@ -119,9 +119,11 @@ class App extends React.Component {
 
                 <details className='view'>
 
-                  <summary><img className="movieImg" src={movie.imageMain} alt={movie.name} /></summary>
+                  <summary>
+                   <h3>{movie.title}</h3>
+                   <img className="movieImg" src={movie.imageMain} alt={movie.name} /></summary>
                   <br/>
-                <div class="viewbox">
+                <div class="viewBox">
                   <h3>Title: {movie.title}</h3>
                   <img src={movie.image1} class="img-thumbnail" />
                   <img src={movie.image2} class="img-thumbnail" />
@@ -130,9 +132,10 @@ class App extends React.Component {
                   <h4>Rated: {movie.rated}</h4>
                   <h4>Summery: {movie.summary}</h4>
                 </div>
+                <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
                 </details>
 
-                <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
+                
 
                 <details>
                   <summary>Edit Here</summary>
