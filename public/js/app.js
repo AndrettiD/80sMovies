@@ -135,9 +135,9 @@ class App extends React.Component {
                 </div>
                 
                 </details>
-
+                <details>
                   <div class="viewBox">
-
+                  
                     <img src={movie.image1} class="img-movieShot" />
                     <img src={movie.image2} class="img-movieShot" />
                     <img src={movie.image3} class="img-movieShot" />
@@ -149,7 +149,7 @@ class App extends React.Component {
                   </div>
 
                   <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
-
+                  
                 </details>
 
                 <details>
