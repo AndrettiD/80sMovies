@@ -53,7 +53,6 @@ body {
 #movieList {
   margin: auto;
   display: flex;  
-  margin: auto;
 }
 
 #movieList li {
@@ -64,5 +63,14 @@ body {
 }
 
 .movieImg {
-  width: 206px;
+  /* width: 206px; */
+}
+
+.view {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  
 }

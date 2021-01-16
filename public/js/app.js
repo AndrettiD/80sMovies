@@ -62,8 +62,9 @@ class App extends React.Component {
           </div>
         </div>
 
-         <details className="create">
-         <summary>Create Movie</summary>
+         <details  className="create" >  
+      
+         <summary >Create Movie</summary>
          <form onSubmit={this.handleSubmit}>
 
          <label htmlFor="title">Title</label>
@@ -84,7 +85,7 @@ class App extends React.Component {
           <input
           type='text'
           id='summary'
-       onChange={this.handleChange} />
+          onChange={this.handleChange} />
           <br />
 
           <label htmlFor="genre">Genre</label>
@@ -102,8 +103,9 @@ class App extends React.Component {
           onChange={this.handleChange} />
           <br />
 
-          <input className="myButton" type="submit" value="Add Movie" />
+          <input className="myButton" type="submit" value="Add Movie"  />
         </form>
+        
         </details>
 
       <ul id="movieList">
@@ -119,15 +121,15 @@ class App extends React.Component {
 
                   <summary><img className="movieImg" src={movie.imageMain} alt={movie.name} /></summary>
                   <br/>
-
+                <div class="viewbox">
                   <h3>Title: {movie.title}</h3>
-                  <img src={movie.image1} />
-                  <img src={movie.image2} />
-                  <img src={movie.image3} />
+                  <img src={movie.image1} class="img-thumbnail" />
+                  <img src={movie.image2} class="img-thumbnail" />
+                  <img src={movie.image3} class="img-thumbnail" />
                   <h4>Genre: {movie.genre}</h4>
                   <h4>Rated: {movie.rated}</h4>
                   <h4>Summery: {movie.summary}</h4>
-
+                </div>
                 </details>
 
                 <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
