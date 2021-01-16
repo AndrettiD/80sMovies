@@ -15,7 +15,7 @@ class App extends React.Component {
     )
   }
 
-  
+
   deleteMovie = (event) => {
     axios.delete('/movies/' + event.target.value).then(response => {
       this.setState({
@@ -23,8 +23,8 @@ class App extends React.Component {
       })
     })
   }
-  
-  
+
+
   updateMovie = (event) => {
     event.preventDefault()
     event.target.reset()
@@ -55,33 +55,58 @@ class App extends React.Component {
   render = () => {
     return (
       <div>
+
+        <div id="titleBar">
+          <h1>80's Movie Emporium</h1>
+          <div id="titleBarSub">
+          </div>
+        </div>
+
          <details className="create">
+         <summary>Create Movie</summary>
          <form onSubmit={this.handleSubmit}>
-         <label htmlFor="name">Name</label>
+
+         <label htmlFor="title">Title</label>
           <input
           type='text'
-          id='name'
+          id='title'
           onChange={this.handleChange} />
           <br />
-          <label htmlFor="image">Image</label>
+
+          <label htmlFor="imageMain">Image</label>
           <input
           type='text'
-          id='image'
+          id='imageMain'
           onChange={this.handleChange} />
           <br />
-          <label htmlFor="movie">Movie</label>
+
+          <label htmlFor="summary">Summary</label>
           <input
           type='text'
-          id='movie'
+          id='summary'
+       onChange={this.handleChange} />
+          <br />
+
+          <label htmlFor="genre">Genre</label>
+          <input
+          type='text'
+          id='genre'
+
           onChange={this.handleChange} />
           <br />
-          
-    
+
+          <label htmlFor="rated">Rated</label>
+          <input
+          type='text'
+          id='rated'
+          onChange={this.handleChange} />
+          <br />
+
           <input className="myButton" type="submit" value="Add Movie" />
         </form>
         </details>
 
-      <ul>
+      <ul id="movieList">
 
         {this.state.movies.map((movie) => {
 
@@ -99,13 +124,13 @@ class App extends React.Component {
                   <img src={movie.image1} />
                   <img src={movie.image2} />
                   <img src={movie.image3} />
-                  <h3>Genre: {movie.genre}</h3>
-                  <h3>Rated: {movie.rated}</h3>
-                  <h3>Summery: {movie.summary}</h3>
+                  <h4>Genre: {movie.genre}</h4>
+                  <h4>Rated: {movie.rated}</h4>
+                  <h4>Summery: {movie.summary}</h4>
 
                 </details>
 
-                 {/* <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Buy Now</button> */}
+                <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
 
                 <details>
                   <summary>Edit Here</summary>

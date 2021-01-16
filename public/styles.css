@@ -4,3 +4,65 @@ Dark Grey: #222831
 Navy Blue: #30475E
 Neon Pink: #F05454
 */
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url("images/wallpaper_dark.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#titleBar h1, h3, details, details summary, label, h4 {
+  color: #DDD;
+}
+
+#titleBar {
+  width: 100%;
+  height: 150px;
+  background-image: linear-gradient(45deg, #222831 25%, #30475e 25%, #30475e 50%, #222831 50%, #222831 75%, #30475e 75%, #30475e 100%);
+  background-size: 56.57px 56.57px;
+  border-bottom: 4px solid #F05454;
+  position: relative;
+}
+
+#titleBarSub {
+  width: 100%;
+  height: 40px;
+  background-color: #222831;
+  position: absolute;
+  bottom: 0;
+}
+
+#titleBar h1 {
+  font-family: "Bebas Neue", sans-serif;
+  margin: auto 10%;
+  height: 110px;
+  line-height: 175px;
+  font-size: 4.1em;
+}
+
+.create {
+  margin: auto 10%;
+}
+
+#movieList {
+  margin: auto;
+  display: flex;  
+  margin: auto;
+}
+
+#movieList li {
+  width: 25vw;
+  padding: .5em;
+  text-align: center;
+  height: 100%;
+}
+
+.movieImg {
+  width: 206px;
+}
