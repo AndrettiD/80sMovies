@@ -53,10 +53,11 @@ body {
 #movieList {
   margin: auto 10%;
   padding: 0;
+  display: flex;
 }
 
 #movieList li {
-  
+
 }
 
 .movieImg {
