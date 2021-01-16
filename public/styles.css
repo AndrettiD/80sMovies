@@ -55,7 +55,17 @@ body {
   text-align: center;
 }
 
-# {}
+.myButton1 {
+  margin-top: 15px;
+	background:linear-gradient(to bottom, #F05454 15%,#30475E 90%);
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:13px;
+	padding:8px 8px;
+	text-decoration:none;
+	
+}
 
 #movieList {
   margin: auto;
