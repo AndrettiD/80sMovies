@@ -56,6 +56,7 @@ class App extends React.Component {
     return (
       <div>
          <details className="create">
+         <summary>Create Movie</summary>
          <form onSubmit={this.handleSubmit}>
          <label htmlFor="name">Name</label>
           <input
@@ -105,7 +106,7 @@ class App extends React.Component {
 
                 </details>
 
-                 {/* <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Buy Now</button> */}
+                <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button> 
 
                 <details>
                   <summary>Edit Here</summary>
