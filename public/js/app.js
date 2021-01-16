@@ -123,19 +123,22 @@ class App extends React.Component {
                    <h3>{movie.title}</h3>
                    <img className="movieImg" src={movie.imageMain} alt={movie.name} /></summary>
                   <br/>
-                <div class="viewBox">
 
-                  <img src={movie.image1} class="img-thumbnail" />
-                  <img src={movie.image2} class="img-thumbnail" />
-                  <img src={movie.image3} class="img-thumbnail" />
-                  <h4>Genre: {movie.genre}</h4>
-                  <h4>Rated: {movie.rated}</h4>
-                  <h4>{movie.summary}</h4>
-                </div>
-                <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
+                  <div class="viewBox">
+
+                    <img src={movie.image1} class="img-movieShot" />
+                    <img src={movie.image2} class="img-movieShot" />
+                    <img src={movie.image3} class="img-movieShot" />
+
+                    <h4 class="movie-genre">Genre: {movie.genre}</h4>
+                    <h4 class="movie-rated">Rated: {movie.rated}</h4>
+                    <h4 class="movie-summary">{movie.summary}</h4>
+
+                  </div>
+
+                  <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
+
                 </details>
-
-
 
                 <details>
                   <summary>Edit Here</summary>
