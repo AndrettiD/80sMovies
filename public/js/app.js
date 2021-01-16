@@ -65,25 +65,34 @@ class App extends React.Component {
          <details className="create">
          <summary>Create Movie</summary>
          <form onSubmit={this.handleSubmit}>
-         <label htmlFor="name">Name</label>
+
+         <label htmlFor="title">Title</label>
           <input
           type='text'
-          id='name'
-          onChange={this.handleChange} />
-          <br />
-          <label htmlFor="image">Image</label>
-          <input
-          type='text'
-          id='image'
-          onChange={this.handleChange} />
-          <br />
-          <label htmlFor="movie">Movie</label>
-          <input
-          type='text'
-          id='movie'
+          id='title'
           onChange={this.handleChange} />
           <br />
 
+          <label htmlFor="imageMain">Image</label>
+          <input
+          type='text'
+          id='imageMain'
+          onChange={this.handleChange} />
+          <br />
+
+          <label htmlFor="genre">Genre</label>
+          <input
+          type='text'
+          id='genre'
+          onChange={this.handleChange} />
+          <br />
+
+          <label htmlFor="rated">Rated</label>
+          <input
+          type='text'
+          id='rated'
+          onChange={this.handleChange} />
+          <br />
 
           <input className="myButton" type="submit" value="Add Movie" />
         </form>
@@ -113,7 +122,7 @@ class App extends React.Component {
 
                 </details>
 
-                <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button> 
+                <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
 
                 <details>
                   <summary>Edit Here</summary>
