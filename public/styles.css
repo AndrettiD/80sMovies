@@ -52,18 +52,21 @@ body {
 
 #movieList {
   margin: auto;
-  display: flex;  
+  display: flex;
 }
 
 #movieList li {
   width: 25vw;
+  margin: 10px;
   padding: .5em;
   text-align: center;
   height: 100%;
+  background-color: rgba(34, 40, 49, 0.8);
+  border-radius: 10px;
 }
 
 .movieImg {
-  /* width: 206px; */
+  width: 90%;
 }
 
 .view {
@@ -72,5 +75,14 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   text-align: center;
-  
+}
+
+.viewBox {
+
+}
+
+.viewBox h4 {
+  font-size: 0.9em;
+  line-height: 1.5em;
+  text-align: left;
 }
