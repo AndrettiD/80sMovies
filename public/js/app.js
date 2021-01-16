@@ -15,7 +15,7 @@ class App extends React.Component {
     )
   }
 
-  
+
   deleteMovie = (event) => {
     axios.delete('/movies/' + event.target.value).then(response => {
       this.setState({
@@ -23,8 +23,8 @@ class App extends React.Component {
       })
     })
   }
-  
-  
+
+
   updateMovie = (event) => {
     event.preventDefault()
     event.target.reset()
@@ -55,8 +55,15 @@ class App extends React.Component {
   render = () => {
     return (
       <div>
+
+        <div id="titleBar">
+          <h1>80's Movie Emporium</h1>
+          <div>
+          </div>
+        </div>
+
          <details className="create">
-         <summary>Create</summary>
+         <summary>Create Movie</summary>
          <form onSubmit={this.handleSubmit}>
          <label htmlFor="name">Name</label>
           <input
@@ -76,8 +83,8 @@ class App extends React.Component {
           id='movie'
           onChange={this.handleChange} />
           <br />
-          
-    
+
+
           <input className="myButton" type="submit" value="Add Movie" />
         </form>
         </details>
@@ -106,7 +113,7 @@ class App extends React.Component {
 
                 </details>
 
-                 {/* <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Buy Now</button> */}
+                <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button> 
 
                 <details>
                   <summary>Edit Here</summary>
