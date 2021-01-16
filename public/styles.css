@@ -88,8 +88,13 @@ body {
   text-align: center;
 }
 
-.viewBox {
+.view details {
 
+}
+
+.viewBox {
+  position: absolute;
+  z-index: 5;
 }
 
 .viewBox h4 {
