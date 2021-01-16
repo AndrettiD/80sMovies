@@ -80,10 +80,18 @@ class App extends React.Component {
           onChange={this.handleChange} />
           <br />
 
+          <label htmlFor="summary">Summary</label>
+          <input
+          type='text'
+          id='summary'
+       onChange={this.handleChange} />
+          <br />
+
           <label htmlFor="genre">Genre</label>
           <input
           type='text'
           id='genre'
+
           onChange={this.handleChange} />
           <br />
 
