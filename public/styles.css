@@ -14,3 +14,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+.container h1, details summary, label {
+  color: #DDD;
+}
