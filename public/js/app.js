@@ -56,6 +56,7 @@ class App extends React.Component {
     return (
       <div>
          <details className="create">
+         <summary>Create</summary>
          <form onSubmit={this.handleSubmit}>
          <label htmlFor="name">Name</label>
           <input
