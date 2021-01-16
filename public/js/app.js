@@ -98,7 +98,7 @@ class App extends React.Component {
         </form>
         </details>
 
-      <ul>
+      <ul id="movieList">
 
         {this.state.movies.map((movie) => {
 
