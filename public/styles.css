@@ -52,17 +52,60 @@ body {
 
 #movieList {
   margin: auto;
-  display: flex;  
-  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #movieList li {
-  width: 25vw;
+  width: 22%;
+  margin: 10px;
   padding: .5em;
   text-align: center;
   height: 100%;
+  background-color: rgba(34, 40, 49, 0.8);
+  border-radius: 10px;
 }
 
 .movieImg {
-  width: 206px;
+  width: 90%;
+}
+
+.img-movieShot {
+  padding: .25rem;
+  background-color: #30475E;
+  /* border: 1px solid #dee2e6; */
+  border-radius: .25rem;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.view {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+
+details summary::-webkit-details-marker {
+  display:none;
+}
+
+.viewBox {
+  /* position: absolute; */
+  z-index: 5;
+}
+
+.viewBox h4 {
+  font-size: 0.9em;
+  line-height: 1.5em;
+  text-align: left;
+  margin: 14px 10px 10px;
+}
+
+.movie-genre, .movie-rated {
+  font-weight: bold;
+  font-size: 1.1em !important;
+  text-align: center !important;
 }

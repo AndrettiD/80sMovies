@@ -18,13 +18,12 @@ movies.post("/", (req, res) => {
 })
 
 movies.put("/:id", (req, res) => {
-    Movies.findByIdAndUpdate(
-      req.params.id, req.body, { new: true },(err, updatedMovies) => {
+    Movies.findByIdAndUpdate(req.params.id, req.body, { new: true },(err, updatedMovie) => {
         if (err) {
           console.log(err);
         } else {
-          Movies.find({}, (err, updatedMovies) => {
-            res.json(updatedMovies)
+          Movies.find({}, (err, updatedMovie) => {
+            res.json(updatedMovie)
           })
         }
       }
