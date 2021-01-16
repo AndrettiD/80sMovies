@@ -58,38 +58,55 @@ class App extends React.Component {
 
         <div id="titleBar">
           <h1>80's Movie Emporium</h1>
-          <div>
+          <div id="titleBarSub">
           </div>
         </div>
 
          <details className="create">
          <summary>Create Movie</summary>
          <form onSubmit={this.handleSubmit}>
-         <label htmlFor="name">Name</label>
+
+         <label htmlFor="title">Title</label>
           <input
           type='text'
-          id='name'
+          id='title'
           onChange={this.handleChange} />
           <br />
-          <label htmlFor="image">Image</label>
+
+          <label htmlFor="imageMain">Image</label>
           <input
           type='text'
-          id='image'
+          id='imageMain'
           onChange={this.handleChange} />
           <br />
+
           <label htmlFor="summary">Summary</label>
           <input
           type='text'
           id='summary'
+       onChange={this.handleChange} />
+          <br />
+
+          <label htmlFor="genre">Genre</label>
+          <input
+          type='text'
+          id='genre'
+
           onChange={this.handleChange} />
           <br />
 
+          <label htmlFor="rated">Rated</label>
+          <input
+          type='text'
+          id='rated'
+          onChange={this.handleChange} />
+          <br />
 
           <input className="myButton" type="submit" value="Add Movie" />
         </form>
         </details>
 
-      <ul>
+      <ul id="movieList">
 
         {this.state.movies.map((movie) => {
 
@@ -113,7 +130,7 @@ class App extends React.Component {
 
                 </details>
 
-                <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button> 
+                <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
 
                 <details>
                   <summary>Edit Here</summary>
