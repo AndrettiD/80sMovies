@@ -22,7 +22,7 @@ body {
 
 #titleBar {
   width: 100%;
-  height: 160px;
+  height: 150px;
   background-color: #30475E;
   border-bottom: 4px solid #F05454;
   position: relative;
@@ -30,7 +30,7 @@ body {
 
 #titleBar div {
   width: 100%;
-  height: 50px;
+  height: 40px;
   background-color: #222831;
   position: absolute;
   bottom: 0;
@@ -38,4 +38,8 @@ body {
 
 #titleBar h1 {
   margin: 0;
+}
+
+.movieImg {
+  width: 206px;
 }
