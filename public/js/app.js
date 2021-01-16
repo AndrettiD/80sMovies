@@ -164,7 +164,7 @@ class App extends React.Component {
                     <br/>
                     <input className="myButton" type="submit" value="Update Movie"/>
                   </form>
-                  <button className="myButton2" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
+                  
                 </details>
 
                   
