@@ -62,9 +62,9 @@ class App extends React.Component {
           </div>
         </div>
 
+      <div className="create">
          <details class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false">
             
-
          <summary>Create Movie</summary>
          <form onSubmit={this.handleSubmit}>
 
@@ -104,11 +104,11 @@ class App extends React.Component {
           onChange={this.handleChange} />
           <br />
 
-          <input className="myButton" type="submit" value="Add Movie"  />
+          <input className="myButton1" type="submit" value="Add Movie"  />
         </form>
 
         </details>
-      
+        </div>
       <ul id="movieList">
 
         {this.state.movies.map((movie) => {
