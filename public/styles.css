@@ -16,7 +16,7 @@ body {
   margin: 0;
 }
 
-#titleBar h1, details summary, label, h4 {
+#titleBar h1, h3, details, details summary, label, h4 {
   color: #DDD;
 }
 
