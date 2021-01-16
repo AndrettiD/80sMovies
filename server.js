@@ -1,9 +1,11 @@
 const express = require("express")
-const app = express() 
+const app = express()
 
 require("dotenv").config()
 const PORT = process.env.PORT
 const mongoose = require("mongoose")
+
+const bootstrap = require("bootstrap")
 
 app.use(express.json())
 const moviesController = require("./controllers/movie_controller.js")
@@ -34,11 +36,8 @@ mongoose.connection.on("disconnected", () => console.log("mongo disconnected"))
 // const PORT = 3000
 // app.get("/", (req, res) => {
 //     res.send ("hello world")
-// } ) 
+// } )
 
 app.listen(PORT,() => {
     console.log(" listening on port ", PORT);
 })
-
-
-
