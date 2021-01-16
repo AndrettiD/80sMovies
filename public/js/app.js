@@ -132,14 +132,14 @@ class App extends React.Component {
                   <h4>Rated: {movie.rated}</h4>
                   <h4>{movie.summary}</h4>
                 </div>
-                <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
+                
                 </details>
 
 
 
                 <details>
-                  <summary>Edit Here</summary>
-                  <form id={movie._id}onSubmit={this.updatedMovies}>
+                  <summary>Edit Movie</summary>
+                  <form id={movie._id} onSubmit={this.updateMovie}>
                     <label htmlFor="title">Title</label>
                     <br/>
                     <input
@@ -164,6 +164,7 @@ class App extends React.Component {
                     <br/>
                     <input className="myButton" type="submit" value="Update Movie"/>
                   </form>
+                  <button className="myButton2" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
                 </details>
 
                   </span>
