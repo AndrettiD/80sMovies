@@ -46,9 +46,16 @@ body {
   font-size: 4.1em;
 }
 
-.create {
-  margin: auto 10%;
+#dropdownMenuLink {
+  margin-left: 50px;
+  margin-top: 15px;
+  border: 1.5px #30475E;
+  margin-bottom: 15px;
+  box-shadow: 0px 5px 5px  #30475E;
+  text-align: center;
 }
+
+# {}
 
 #movieList {
   margin: auto;
@@ -88,8 +95,8 @@ body {
   text-align: center;
 }
 
-.view details {
-
+details summary::-webkit-details-marker {
+  display:none;
 }
 
 .viewBox {
