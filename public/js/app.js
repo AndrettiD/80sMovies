@@ -62,9 +62,10 @@ class App extends React.Component {
           </div>
         </div>
 
-         <details  className="create" >
+         <details class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+            
 
-         <summary >Create Movie</summary>
+         <summary>Create Movie</summary>
          <form onSubmit={this.handleSubmit}>
 
          <label htmlFor="title">Title</label>
