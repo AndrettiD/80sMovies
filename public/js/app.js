@@ -139,47 +139,30 @@ class App extends React.Component {
 
                 <details>
                   <summary>Edit Here</summary>
-                  <form id={movie._id}
-
-                    onSubmit={this.updateMovie}>
-
+                  <form id={movie._id}onSubmit={this.updatedMovies}>
                     <label htmlFor="title">Title</label>
                     <br/>
                     <input
                     type="text"
-                    id="title"
-                    onChange={this.handleChange} />
+                    id="title" onChange={this.handleChange}/>
                     <br/>
-
                     <label htmlFor="imageMain">Image</label>
                     <br/>
-                    <input
-                    type="text"
-                    id="imageMain"
-                    onChange={this.handleChange} />
+                    <input type="text" id="imageMain" onChange={this.handleChange}/>
                     <br/>
-
                     <label htmlFor="genre">Genre</label>
                     <br/>
-                    <input
-                    type="text"
-                    id="genre"
-                    onChange={this.handleChange} />
+                    <input type="text" id="genre" onChange={this.handleChange}/>
                     <br/>
-
                     <label htmlFor="rated">Rated</label>
                     <br/>
-                    <input
-                    type="text"
-                    id="rated"
-                    onChange={this.handleChange} />
+                    <input type="text" id="rated" onChange={this.handleChange}/>
                     <br/>
-
-                    <input
-                    className="myButton"
-                    type="submit"
-                    value="Update Movie" />
-
+                    <label htmlFor="rated">Summery</label>
+                    <br/>
+                    <input type="text" id="rated" onChange={this.handleChange} />
+                    <br/>
+                    <input className="myButton" type="submit" value="Update Movie"/>
                   </form>
                 </details>
 
