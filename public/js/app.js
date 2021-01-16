@@ -124,8 +124,20 @@ class App extends React.Component {
                    <img className="movieImg" src={movie.imageMain} alt={movie.name} /></summary>
                   <br/>
 
-                  <div class="viewBox">
+                <div class="viewBox">
 
+                  <img src={movie.image1} class="img-thumbnail" />
+                  <img src={movie.image2} class="img-thumbnail" />
+                  <img src={movie.image3} class="img-thumbnail" />
+                  <h4>Genre: {movie.genre}</h4>
+                  <h4>Rated: {movie.rated}</h4>
+                  <h4>{movie.summary}</h4>
+                </div>
+                
+                </details>
+                <details>
+                  <div class="viewBox">
+                  
                     <img src={movie.image1} class="img-movieShot" />
                     <img src={movie.image2} class="img-movieShot" />
                     <img src={movie.image3} class="img-movieShot" />
@@ -137,53 +149,37 @@ class App extends React.Component {
                   </div>
 
                   <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
-
+                  
                 </details>
 
                 <details>
-                  <summary>Edit Here</summary>
-                  <form id={movie._id}
-
-                    onSubmit={this.updateMovie}>
-
+                  <summary>Edit Movie</summary>
+                  <form id={movie._id} onSubmit={this.updateMovie}>
                     <label htmlFor="title">Title</label>
                     <br/>
                     <input
                     type="text"
-                    id="title"
-                    onChange={this.handleChange} />
+                    id="title" onChange={this.handleChange}/>
                     <br/>
-
                     <label htmlFor="imageMain">Image</label>
                     <br/>
-                    <input
-                    type="text"
-                    id="imageMain"
-                    onChange={this.handleChange} />
+                    <input type="text" id="imageMain" onChange={this.handleChange}/>
                     <br/>
-
                     <label htmlFor="genre">Genre</label>
                     <br/>
-                    <input
-                    type="text"
-                    id="genre"
-                    onChange={this.handleChange} />
+                    <input type="text" id="genre" onChange={this.handleChange}/>
                     <br/>
-
                     <label htmlFor="rated">Rated</label>
                     <br/>
-                    <input
-                    type="text"
-                    id="rated"
-                    onChange={this.handleChange} />
+                    <input type="text" id="rated" onChange={this.handleChange}/>
                     <br/>
-
-                    <input
-                    className="myButton"
-                    type="submit"
-                    value="Update Movie" />
-
+                    <label htmlFor="rated">Summery</label>
+                    <br/>
+                    <input type="text" id="rated" onChange={this.handleChange} />
+                    <br/>
+                    <input className="myButton" type="submit" value="Update Movie"/>
                   </form>
+                  <button className="myButton2" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
                 </details>
 
                   </span>
