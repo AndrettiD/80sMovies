@@ -15,6 +15,6 @@ body {
   background-attachment: fixed;
 }
 
-.container h1, details summary, label {
+.container h1, details summary, label, h4 {
   color: #DDD;
 }
