@@ -107,14 +107,14 @@ class App extends React.Component {
         </form>
 
         </details>
-
+      
       <ul id="movieList">
 
         {this.state.movies.map((movie) => {
 
           return (
             <li key={movie._id}>
-              <span>
+              
                 <h2 className="moviesName">{movie.name}</h2>
 
                 <details className='view'>
@@ -133,24 +133,9 @@ class App extends React.Component {
                   <h4>Rated: {movie.rated}</h4>
                   <h4>{movie.summary}</h4>
                 </div>
+                </details>
                 
-                </details>
-                <details>
-                  <div class="viewBox">
-                  
-                    <img src={movie.image1} class="img-movieShot" />
-                    <img src={movie.image2} class="img-movieShot" />
-                    <img src={movie.image3} class="img-movieShot" />
-
-                    <h4 class="movie-genre">Genre: {movie.genre}</h4>
-                    <h4 class="movie-rated">Rated: {movie.rated}</h4>
-                    <h4 class="movie-summary">{movie.summary}</h4>
-
-                  </div>
-
-                  <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
-                  
-                </details>
+                <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
 
                 <details>
                   <summary>Edit Movie</summary>
@@ -182,14 +167,16 @@ class App extends React.Component {
                   <button className="myButton2" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
                 </details>
 
-                  </span>
+                  
                 </li>
               )
             })
           }
 
         </ul>
+      
       </div>
+      
     )
   }
 }

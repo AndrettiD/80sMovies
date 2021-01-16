@@ -88,8 +88,8 @@ body {
   text-align: center;
 }
 
-.view details {
-
+details summary::-webkit-details-marker {
+  display:none;
 }
 
 .viewBox {
