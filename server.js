@@ -5,7 +5,7 @@ require("dotenv").config()
 const PORT = process.env.PORT
 const mongoose = require("mongoose")
 
-const bootstrap = require("bootstrap")
+//const bootstrap = require("bootstrap")
 
 app.use(express.json())
 const moviesController = require("./controllers/movie_controller.js")

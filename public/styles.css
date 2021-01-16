@@ -51,13 +51,16 @@ body {
 }
 
 #movieList {
-  margin: auto 10%;
-  padding: 0;
-  display: flex;
+  margin: auto;
+  display: flex;  
+  margin: auto;
 }
 
 #movieList li {
-
+  width: 25vw;
+  padding: .5em;
+  text-align: center;
+  height: 100%;
 }
 
 .movieImg {
