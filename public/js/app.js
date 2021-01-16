@@ -58,7 +58,7 @@ class App extends React.Component {
 
         <div id="titleBar">
           <h1>80's Movie Emporium</h1>
-          <div>
+          <div id="titleBarSub">
           </div>
         </div>
 
