@@ -136,19 +136,19 @@ class App extends React.Component {
                   <br/>
 
                 <div class="viewBox">
-
+                  <h4>Genre: {movie.genre}</h4>
+                  <h4>Rated: {movie.rated}</h4>
+                  <h4>Summary:{movie.summary}</h4>
                   <img src={movie.image1} class="img-thumbnail" />
                   <img src={movie.image2} class="img-thumbnail" />
                   <img src={movie.image3} class="img-thumbnail" />
-                  <h4>Genre: {movie.genre}</h4>
-                  <h4>Rated: {movie.rated}</h4>
-                  <h4>{movie.summary}</h4>
                 </div>
                 </details>
-
+              <div>
                 <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
+              </div>
+                <details class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" id="dropdownMenuLink2" aria-haspopup="true" aria-expanded="false">
 
-                <details>
                   <summary>Edit Movie</summary>
                   <form id={movie._id} onSubmit={this.updateMovie}>
                     <label htmlFor="title">Title</label>
@@ -169,9 +169,13 @@ class App extends React.Component {
                     <br/>
                     <input type="text" id="rated" onChange={this.handleChange}/>
                     <br/>
+<<<<<<< HEAD
                     <label htmlFor="rated">Summary</label>
+=======
+                    <label htmlFor="summery">Summery</label>
+>>>>>>> b13b5497123b9d35db2ec014d5f84e51228c27a8
                     <br/>
-                    <input type="text" id="rated" onChange={this.handleChange} />
+                    <input type="text" id="summery" onChange={this.handleChange} />
                     <br/>
                     <input className="myButton" type="submit" value="Update Movie"/>
                   </form>
