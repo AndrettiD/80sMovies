@@ -62,10 +62,11 @@ class App extends React.Component {
           </div>
         </div>
 
+      <div className="create">
          <details class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false">
 
-
          <summary>Create Movie</summary>
+      
          <form onSubmit={this.handleSubmit}>
 
           <div>
@@ -188,7 +189,5 @@ class App extends React.Component {
     )
   }
 }
-
-
 
 ReactDOM.render(<App></App>, document.querySelector('main'))
