@@ -1,7 +1,12 @@
 class App extends React.Component {
 
   state = {
-    movies: []
+    movies: [],
+    title: "",
+        imageMain: "",
+        genre: "",
+        rated: "",
+        summary: ""
   }
 
   handleChange = (event) => {
@@ -33,13 +38,10 @@ class App extends React.Component {
       this.setState({
         movies: response.data,
         title: "",
-        genre: "",
-        summary: "",
-        rated: "",
         imageMain: "",
-        image1: "",
-        image2: "",
-        image3: ""
+        genre: "",
+        rated: "",
+        summary: ""
       })
     })
   }
@@ -60,10 +62,10 @@ class App extends React.Component {
           <h1>80's Movie Emporium</h1>
           <div id="titleBarSub">
           </div>
-        </div>
+      </div>
 
       <div className="create">
-         <details class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+         <details type="button" id="createButton" class="btn btn-secondary">
 
          <summary>Create Movie</summary>
 
@@ -118,7 +120,7 @@ class App extends React.Component {
         </details>
 
       </div>
-
+          
       <ul id="movieList">
 
         {this.state.movies.map((movie) => {
@@ -132,22 +134,20 @@ class App extends React.Component {
 
                   <summary>
                    <h3>{movie.title}</h3>
-                   <img className="movieImg" src={movie.imageMain} alt={movie.name} /></summary>
+                   <img className="movieImg"  src={movie.imageMain} alt={movie.name} /></summary>
                   <br/>
 
                 <div class="viewBox">
                   <h4>Genre: {movie.genre}</h4>
                   <h4>Rated: {movie.rated}</h4>
                   <h4>Summary:{movie.summary}</h4>
-                  <img src={movie.image1} class="img-thumbnail" />
+                  {/* <img src={movie.image1} class="img-thumbnail" />
                   <img src={movie.image2} class="img-thumbnail" />
-                  <img src={movie.image3} class="img-thumbnail" />
+                  <img src={movie.image3} class="img-thumbnail" /> */}
                 </div>
                 </details>
-              <div>
-                <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
-              </div>
-                <details class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" id="dropdownMenuLink2" aria-haspopup="true" aria-expanded="false">
+              
+                <details  type="button" id="editBtn" class="btn btn-secondary"> 
 
                   <summary>Edit Movie</summary>
                   <form id={movie._id} onSubmit={this.updateMovie}>
@@ -169,12 +169,16 @@ class App extends React.Component {
                     <br/>
                     <input type="text" id="rated" onChange={this.handleChange}/>
                     <br/>
-                    <label htmlFor="summery">Summery</label>
+                    <label htmlFor="summary">Summary</label>
                     <br/>
-                    <input type="text" id="summery" onChange={this.handleChange} />
+                    <input type="text" id="summary" onChange={this.handleChange} />
                     <br/>
                     <input className="myButton" type="submit" value="Update Movie"/>
                   </form>
+
+              <div>
+                <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
+              </div>
 
                 </details>
 
