@@ -15,8 +15,8 @@ body {
   background-attachment: fixed;
   margin: 0;
   font-family: Arial, sans-serif;
-  
-  
+
+
 }
 
 #titleBar h1, h3, details, details summary, label, h4 {
@@ -58,7 +58,7 @@ body {
   text-align: center;
   width: 40%;
   cursor: default;
-  
+
 }
 
 #createButton summary {
@@ -141,6 +141,15 @@ body {
   text-align: center;
 }
 
+.view summary {
+  margin-bottom: 10px;
+}
+
+.view summary h3 {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
 details summary::-webkit-details-marker {
   display:none;
 }
@@ -164,11 +173,11 @@ details summary::-webkit-details-marker {
 }
 
 .myButton {
-	box-shadow:inset 0px 1px 0px 0px #fbafe3;
-	background:linear-gradient(to bottom, #ff5bb0 5%, #ef027d 100%);
-	background-color:#ff5bb0;
+	box-shadow:inset 0px 1px 0px 0px #faafaf;
+	background:linear-gradient(to bottom, #f054a4 5%, #f00202 100%);
+	background-color:#ff5c5c;
 	border-radius:6px;
-	border:1px solid #ee1eb5;
+	border:1px solid #ed1f1f;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -177,13 +186,13 @@ details summary::-webkit-details-marker {
 	font-weight:bold;
 	padding:6px 24px;
 	text-decoration:none;
-  text-shadow:0px 1px 0px #c70067;
+  text-shadow:0px 1px 0px #c70000;
   margin: 15px 0 9px 0;
 }
 
 .myButton:hover {
-	background:linear-gradient(to bottom, #ef027d 5%, #ff5bb0 100%);
-	background-color:#ef027d;
+	background:linear-gradient(to bottom, #f00202 5%, #ff5c5c 100%);
+	background-color:#f00202;
 }
 
 .myButton:active {
