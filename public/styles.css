@@ -1,9 +1,9 @@
-/*
-Light Grey: #DDDDDD
-Dark Grey: #222831
-Navy Blue: #30475E
-Neon Pink: #F05454
-*/
+:root{
+--LightGrey-bg-color: #DDDDDD;
+--DarkGrey-bg-color: #222831;
+--NavyBlue-bg-color: #30475E;
+--NeonPink-bg-color: #F05454;
+}
 
 body {
   width: 100%;
@@ -15,10 +15,12 @@ body {
   background-attachment: fixed;
   margin: 0;
   font-family: Arial, sans-serif;
+  
+  
 }
 
 #titleBar h1, h3, details, details summary, label, h4 {
-  color: #DDD;
+  color: var(--LightGrey-bg-color);
 }
 
 #titleBar {
@@ -26,7 +28,7 @@ body {
   height: 150px;
   background-image: linear-gradient(45deg, #222831 25%, #30475e 25%, #30475e 50%, #222831 50%, #222831 75%, #30475e 75%, #30475e 100%);
   background-size: 56.57px 56.57px;
-  border-bottom: 4px solid #F05454;
+  border-bottom: 4px solid var(--NeonPink-bg-color);
   position: relative;
 }
 
@@ -46,9 +48,60 @@ body {
   font-size: 4.1em;
 }
 
-.create {
-  margin: auto 10%;
+#createButton {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border: 1.5px #30475E;
+  box-shadow: 0px 5px 5px  #30475E;
+  text-align: center;
+  width: 40%;
+  cursor: default;
+  
 }
+
+#createButton summary {
+  font-size: 1.6em;
+  text-align: left;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#createButton form {
+  /* padding: 0 15%; */
+}
+
+#createButton form div {
+  width: 80%;
+  text-align: right;
+  margin: 0 10% 8px 5%;
+}
+
+#createButton label {
+  font-size: 0.85em;
+}
+
+#createButton form input {
+  width: 70%;
+}
+
+.myButton1 {
+  margin-top: 21px 0 15px;
+	background:linear-gradient(to bottom, #ff5bb0 5%, #ef027d 100%);
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:13px;
+	padding:8px 8px;
+	text-decoration:none;
+
+}
+
+#editBtn {
+  margin: 20px 0 10px 0;
+}
+
 
 #movieList {
   margin: auto;
@@ -62,7 +115,7 @@ body {
   padding: .5em;
   text-align: center;
   height: 100%;
-  background-color: rgba(34, 40, 49, 0.8);
+  background-color: rgba(34, 40, 49, 0.9);
   border-radius: 10px;
 }
 
@@ -108,4 +161,39 @@ details summary::-webkit-details-marker {
   font-weight: bold;
   font-size: 1.1em !important;
   text-align: center !important;
+}
+
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #fbafe3;
+	background:linear-gradient(to bottom, #ff5bb0 5%, #ef027d 100%);
+	background-color:#ff5bb0;
+	border-radius:6px;
+	border:1px solid #ee1eb5;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #c70067;
+  margin: 15px 0 9px 0;
+}
+
+.myButton:hover {
+	background:linear-gradient(to bottom, #ef027d 5%, #ff5bb0 100%);
+	background-color:#ef027d;
+}
+
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+#dropdownMenuLink2 {
+  border: 1.5px #30475E;
+  box-shadow: 0px 5px 5px  #30475E;
+  text-align: center;
+  cursor: default;
 }

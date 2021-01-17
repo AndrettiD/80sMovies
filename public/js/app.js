@@ -1,7 +1,12 @@
 class App extends React.Component {
 
   state = {
-    movies: []
+    movies: [],
+    title: "",
+        imageMain: "",
+        genre: "",
+        rated: "",
+        summary: ""
   }
 
   handleChange = (event) => {
@@ -33,13 +38,10 @@ class App extends React.Component {
       this.setState({
         movies: response.data,
         title: "",
-        genre: "",
-        summary: "",
-        rated: "",
         imageMain: "",
-        image1: "",
-        image2: "",
-        image3: ""
+        genre: "",
+        rated: "",
+        summary: ""
       })
     })
   }
@@ -60,84 +62,93 @@ class App extends React.Component {
           <h1>80's Movie Emporium</h1>
           <div id="titleBarSub">
           </div>
-        </div>
+      </div>
 
-         <details  className="create" >
+      <div className="create">
+         <details type="button" id="createButton" class="btn btn-secondary">
 
-         <summary >Create Movie</summary>
+         <summary>Create Movie</summary>
+
          <form onSubmit={this.handleSubmit}>
 
-         <label htmlFor="title">Title</label>
-          <input
-          type='text'
-          id='title'
-          onChange={this.handleChange} />
-          <br />
+          <div>
+            <label htmlFor="title">Title&nbsp;</label>
+            <input
+            type='text'
+            id='title'
+            onChange={this.handleChange} />
+          </div>
 
-          <label htmlFor="imageMain">Image</label>
-          <input
-          type='text'
-          id='imageMain'
-          onChange={this.handleChange} />
-          <br />
+          <div>
+            <label htmlFor="imageMain">Image&nbsp;</label>
+            <input
+            type='text'
+            id='imageMain'
+            onChange={this.handleChange} />
+          </div>
 
-          <label htmlFor="summary">Summary</label>
-          <input
-          type='text'
-          id='summary'
-          onChange={this.handleChange} />
-          <br />
+          <div>
+            <label htmlFor="summary">Summary&nbsp;</label>
+            <input
+            type='text'
+            id='summary'
+            onChange={this.handleChange} />
+          </div>
 
-          <label htmlFor="genre">Genre</label>
-          <input
-          type='text'
-          id='genre'
+          <div>
+            <label htmlFor="genre">Genre&nbsp;</label>
+            <input
+            type='text'
+            id='genre'
+            onChange={this.handleChange} />
+          </div>
 
-          onChange={this.handleChange} />
-          <br />
+          <div>
+            <label htmlFor="rated">Rated&nbsp;</label>
+            <input
+            type='text'
+            id='rated'
+            onChange={this.handleChange} />
+          </div>
 
-          <label htmlFor="rated">Rated</label>
-          <input
-          type='text'
-          id='rated'
-          onChange={this.handleChange} />
-          <br />
+          <div>
+            <input className="myButton1" type="submit" value="Add Movie"  />
+          </div>
 
-          <input className="myButton" type="submit" value="Add Movie"  />
         </form>
 
         </details>
-      
+
+      </div>
+          
       <ul id="movieList">
 
         {this.state.movies.map((movie) => {
 
           return (
             <li key={movie._id}>
-              
+
                 <h2 className="moviesName">{movie.name}</h2>
 
                 <details className='view'>
 
                   <summary>
                    <h3>{movie.title}</h3>
-                   <img className="movieImg" src={movie.imageMain} alt={movie.name} /></summary>
+                   <img className="movieImg"  src={movie.imageMain} alt={movie.name} /></summary>
                   <br/>
 
                 <div class="viewBox">
-
-                  <img src={movie.image1} class="img-thumbnail" />
-                  <img src={movie.image2} class="img-thumbnail" />
-                  <img src={movie.image3} class="img-thumbnail" />
                   <h4>Genre: {movie.genre}</h4>
                   <h4>Rated: {movie.rated}</h4>
-                  <h4>{movie.summary}</h4>
+                  <h4>Summary:{movie.summary}</h4>
+                  {/* <img src={movie.image1} class="img-thumbnail" />
+                  <img src={movie.image2} class="img-thumbnail" />
+                  <img src={movie.image3} class="img-thumbnail" /> */}
                 </div>
                 </details>
-                
-                <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
+              
+                <details  type="button" id="editBtn" class="btn btn-secondary"> 
 
-                <details>
                   <summary>Edit Movie</summary>
                   <form id={movie._id} onSubmit={this.updateMovie}>
                     <label htmlFor="title">Title</label>
@@ -158,29 +169,32 @@ class App extends React.Component {
                     <br/>
                     <input type="text" id="rated" onChange={this.handleChange}/>
                     <br/>
-                    <label htmlFor="rated">Summery</label>
+                    <label htmlFor="summary">Summary</label>
                     <br/>
-                    <input type="text" id="rated" onChange={this.handleChange} />
+                    <input type="text" id="summary" onChange={this.handleChange} />
                     <br/>
                     <input className="myButton" type="submit" value="Update Movie"/>
                   </form>
-                  
+
+              <div>
+                <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
+              </div>
+
                 </details>
 
-                  
+
                 </li>
               )
             })
           }
 
         </ul>
-      
+
       </div>
-      
+
     )
   }
 }
-
 
 
 ReactDOM.render(<App></App>, document.querySelector('main'))
