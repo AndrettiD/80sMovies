@@ -69,49 +69,43 @@ class App extends React.Component {
 
          <form onSubmit={this.handleSubmit}>
 
-          <div>
-            <label htmlFor="title">Title&nbsp;</label>
-            <input
-            type='text'
-            id='title'
-            onChange={this.handleChange} />
-          </div>
+         <label htmlFor="title">Title</label>
+         <input
+         type='text'
+         id='title'
+         onChange={this.handleChange} />
+         <br />
 
-          <div>
-            <label htmlFor="imageMain">Image&nbsp;</label>
-            <input
-            type='text'
-            id='imageMain'
-            onChange={this.handleChange} />
-          </div>
+         <label htmlFor="imageMain">Image</label>
+         <input
+         type='text'
+         id='imageMain'
+         onChange={this.handleChange} />
+         <br />
 
-          <div>
-            <label htmlFor="summary">Summary&nbsp;</label>
-            <input
-            type='text'
-            id='summary'
-            onChange={this.handleChange} />
-          </div>
+         <label htmlFor="summary">Summary</label>
+         <input
+         type='text'
+         id='summary'
+         onChange={this.handleChange} />
+         <br />
 
-          <div>
-            <label htmlFor="genre">Genre&nbsp;</label>
-            <input
-            type='text'
-            id='genre'
-            onChange={this.handleChange} />
-          </div>
+         <label htmlFor="genre">Genre</label>
+         <input
+         type='text'
+         id='genre'
 
-          <div>
-            <label htmlFor="rated">Rated&nbsp;</label>
-            <input
-            type='text'
-            id='rated'
-            onChange={this.handleChange} />
-          </div>
+         onChange={this.handleChange} />
+         <br />
 
-          <div>
-            <input className="myButton" type="submit" value="Add Movie"  />
-          </div>
+         <label htmlFor="rated">Rated</label>
+         <input
+         type='text'
+         id='rated'
+         onChange={this.handleChange} />
+         <br />
+
+         <input className="myButton1" type="submit" value="Add Movie"  />
 
         </form>
 
