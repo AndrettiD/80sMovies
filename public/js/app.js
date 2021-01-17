@@ -110,7 +110,7 @@ class App extends React.Component {
           </div>
 
           <div>
-            <input className="myButton" type="submit" value="Add Movie"  />
+            <input className="myButton1" type="submit" value="Add Movie"  />
           </div>
 
         </form>
