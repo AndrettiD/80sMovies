@@ -18,17 +18,17 @@ movies.post("/", (req, res) => {
 })
 
 movies.put("/:id", (req, res) => {
-    Movies.findByIdAndUpdate(req.params.id, req.body, { new: true },(err, updatedMovie) => {
-        if (err) {
-          console.log(err);
-        } else {
-          Movies.find({}, (err, updatedMovie) => {
-            res.json(updatedMovie)
-          })
-        }
+  Movies.findByIdAndUpdate(req.params.id, req.body, { new: true },(err, updateMovies) => {
+      if (err) {
+        console.log(err);
+      } else {
+        Movies.find({}, (err, updateMovies) => {
+          res.json(updateMovies)
+        })
       }
-    )
-  })
+    }
+  )
+})
 
   movies.delete("/:id", (req, res) => {
       Movies.findByIdAndRemove(req.params.id, (err, deleteMovies) => {
