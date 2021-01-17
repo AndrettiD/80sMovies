@@ -64,58 +64,66 @@ class App extends React.Component {
 
       <div className="create">
          <details class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false">
-            
+
          <summary>Create Movie</summary>
+      
          <form onSubmit={this.handleSubmit}>
 
-         <label htmlFor="title">Title</label>
-          <input
-          type='text'
-          id='title'
-          onChange={this.handleChange} />
-          <br />
+          <div>
+            <label htmlFor="title">Title&nbsp;</label>
+            <input
+            type='text'
+            id='title'
+            onChange={this.handleChange} />
+          </div>
 
-          <label htmlFor="imageMain">Image</label>
-          <input
-          type='text'
-          id='imageMain'
-          onChange={this.handleChange} />
-          <br />
+          <div>
+            <label htmlFor="imageMain">Image&nbsp;</label>
+            <input
+            type='text'
+            id='imageMain'
+            onChange={this.handleChange} />
+          </div>
 
-          <label htmlFor="summary">Summary</label>
-          <input
-          type='text'
-          id='summary'
-          onChange={this.handleChange} />
-          <br />
+          <div>
+            <label htmlFor="summary">Summary&nbsp;</label>
+            <input
+            type='text'
+            id='summary'
+            onChange={this.handleChange} />
+          </div>
 
-          <label htmlFor="genre">Genre</label>
-          <input
-          type='text'
-          id='genre'
+          <div>
+            <label htmlFor="genre">Genre&nbsp;</label>
+            <input
+            type='text'
+            id='genre'
+            onChange={this.handleChange} />
+          </div>
 
-          onChange={this.handleChange} />
-          <br />
+          <div>
+            <label htmlFor="rated">Rated&nbsp;</label>
+            <input
+            type='text'
+            id='rated'
+            onChange={this.handleChange} />
+          </div>
 
-          <label htmlFor="rated">Rated</label>
-          <input
-          type='text'
-          id='rated'
-          onChange={this.handleChange} />
-          <br />
+          <div>
+            <input className="myButton" type="submit" value="Add Movie"  />
+          </div>
 
-          <input className="myButton1" type="submit" value="Add Movie"  />
         </form>
 
         </details>
-        </div>
+
       <ul id="movieList">
 
         {this.state.movies.map((movie) => {
 
           return (
             <li key={movie._id}>
-              
+
                 <h2 className="moviesName">{movie.name}</h2>
 
                 <details className='view'>
@@ -135,7 +143,7 @@ class App extends React.Component {
                   <h4>{movie.summary}</h4>
                 </div>
                 </details>
-                
+
                 <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
 
                 <details>
@@ -165,23 +173,21 @@ class App extends React.Component {
                     <br/>
                     <input className="myButton" type="submit" value="Update Movie"/>
                   </form>
-                  
+
                 </details>
 
-                  
+
                 </li>
               )
             })
           }
 
         </ul>
-      
+
       </div>
-      
+
     )
   }
 }
-
-
 
 ReactDOM.render(<App></App>, document.querySelector('main'))
