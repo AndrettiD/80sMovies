@@ -47,15 +47,39 @@ body {
 }
 
 #dropdownMenuLink {
-  margin-left: 50px;
+  margin-left: 30%;
+  margin-right: 30%;
   margin-top: 15px;
   border: 1.5px #30475E;
   margin-bottom: 15px;
   box-shadow: 0px 5px 5px  #30475E;
   text-align: center;
+  width: 40%;
 }
 
-# {}
+#dropdownMenuLink summary {
+  font-size: 1.6em;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+#dropdownMenuLink form {
+  /* padding: 0 15%; */
+}
+
+#dropdownMenuLink form div {
+  width: 80%;
+  text-align: right;
+  margin: 0 10% 8px 5%;
+}
+
+#dropdownMenuLink label {
+  font-size: 0.85em;
+}
+
+#dropdownMenuLink form input {
+  width: 70%;
+}
 
 #movieList {
   margin: auto;
@@ -69,7 +93,7 @@ body {
   padding: .5em;
   text-align: center;
   height: 100%;
-  background-color: rgba(34, 40, 49, 0.8);
+  background-color: rgba(34, 40, 49, 0.9);
   border-radius: 10px;
 }
 
