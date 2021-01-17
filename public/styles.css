@@ -132,6 +132,15 @@ body {
   text-align: center;
 }
 
+.view summary {
+  margin-bottom: 10px;
+}
+
+.view summary h3 {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
 details summary::-webkit-details-marker {
   display:none;
 }
