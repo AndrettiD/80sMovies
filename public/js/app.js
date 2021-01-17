@@ -169,11 +169,7 @@ class App extends React.Component {
                     <br/>
                     <input type="text" id="rated" onChange={this.handleChange}/>
                     <br/>
-<<<<<<< HEAD
-                    <label htmlFor="rated">Summary</label>
-=======
                     <label htmlFor="summery">Summery</label>
->>>>>>> b13b5497123b9d35db2ec014d5f84e51228c27a8
                     <br/>
                     <input type="text" id="summery" onChange={this.handleChange} />
                     <br/>
