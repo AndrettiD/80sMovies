@@ -224,4 +224,5 @@ details summary::-webkit-details-marker {
 #footer, h6 {
   color: var(--LightGrey-bg-color);
   text-align: center;
+  padding-top: 7px;
 }
