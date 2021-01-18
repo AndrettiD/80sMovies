@@ -65,7 +65,7 @@ class App extends React.Component {
       </div>
 
       <div className="create">
-         <details type="button" id="createButton" class="btn btn-secondary">
+         <details type="button" id="createButton" class="btn btn-secondary" >
 
          <summary>Create Movie</summary>
 

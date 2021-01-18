@@ -15,9 +15,12 @@ body {
   background-attachment: fixed;
   margin: 0;
   font-family: Arial, sans-serif;
-
-
+  
 }
+
+
+  
+
 
 #titleBar h1, h3, details, details summary, label, h4 {
   color: var(--LightGrey-bg-color);
@@ -58,8 +61,8 @@ body {
   text-align: center;
   width: 40%;
   cursor: default;
-
 }
+
 
 #createButton summary {
   font-size: 1.6em;
