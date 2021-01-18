@@ -188,10 +188,16 @@ class App extends React.Component {
             })
           }
 
+        
+
         </ul>
+        <div id="footer">
+            <h6> Created  by  Andrew Bayles  &  Andretti Duvenhage </h6>
+            <div id="titleBarSub">
+            </div>
+        </div>
 
       </div>
-
     )
   }
 }
