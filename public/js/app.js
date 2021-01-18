@@ -65,7 +65,7 @@ class App extends React.Component {
       </div>
 
       <div className="create">
-         <details type="button" id="createButton" class="btn btn-secondary">
+         <details type="button" id="createButton" class="btn btn-secondary" >
 
          <summary>Create Movie</summary>
 
@@ -188,10 +188,17 @@ class App extends React.Component {
             })
           }
 
+        
+
         </ul>
+        <div id="footer">
+            
+            <div id="titleBarSub">
+            <h6> Created  by  Andrew Bayles  &  Andretti Duvenhage </h6>
+            </div>
+        </div>
 
       </div>
-
     )
   }
 }
