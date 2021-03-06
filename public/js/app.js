@@ -177,7 +177,8 @@ class App extends React.Component {
                   </form>
 
               <div>
-                <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button>
+                {/* <button className="myButton" value={movie._id} onClick={this.deleteMovie}>Remove Movie</button> */}
+                <button className="myButton">Remove Movie</button>
               </div>
 
                 </details>
