@@ -6,6 +6,8 @@ Andrew Bayles
 Andretti Duvenhage
 
 
+Run in two terminals: nodemon and npm start
+
 This project is for you to have,  your own 80’s film collection. Where you can create, edit and remove film from you collection. 
 
 
